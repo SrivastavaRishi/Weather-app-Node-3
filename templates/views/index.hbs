@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="./images/weather.png">
+        <link rel="stylesheet" href="./css/master.css">
+        <title>Weather</title>
+    </head>
+    <body>
+        <div class="main_content">
+            {{>header}}
+            <p>Use this site to get your weather.</p>
+        <form action="/" method="POST">
+            <input id="cityinput" type="text" name="Cityname" placeholder="location">
+            <button>Search</button>
+        </form>
+
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+        </div>
+        {{>footer}}
+        <script src="./js/app.js" charset="utf-8"></script>
+    </body>
+</html>
+
