@@ -6,7 +6,6 @@ const bodyParser = require('body-parser')
 const https = require('https')
 
 const port = process.env.PORT || 3000
-
 app.use(bodyParser.urlencoded({extended:true}));
 
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -56,7 +55,7 @@ app.post("/",function(req, res){
     })}else{
         console.log('Enter valid city');
         res.render('error', {
-            message : 'Enter valid city', 
+            message : 'Enter a valid city', 
             creater : 'Rishi Srivastava'
         })
       }
