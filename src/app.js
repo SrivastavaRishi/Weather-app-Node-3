@@ -5,6 +5,8 @@ const app = express();
 const bodyParser = require('body-parser')
 const https = require('https')
 
+const port = process.env.PORT || 3000
+
 app.use(bodyParser.urlencoded({extended:true}));
 
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -92,4 +94,4 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => console.log('Server is running successfull on port 3000'))
+app.listen(port, () => console.log('Server is running successfull on port ' + port))
